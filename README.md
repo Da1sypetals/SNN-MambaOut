@@ -26,6 +26,7 @@ spikingjelly
 ## SMO, XSMO
 
 1. Make sure your `nvcc` version is compatible with PyTorch. If you use CUDA 12.1 with x86-64 Linux, you can use my compiled binary, in `build_mambaout`. Otherwise, compilation will start automatically,  repoting a runtime error if versions are incompatible.
+    - Note that the whole directory `build_<operator_name>` is generated and is not intended for manual modification.
 2. See `val.sh`, modify the three arguments at top. Checkpoint file name should match model name.
 3. `bash val.sh` and wait. You should see results in a minute.
 
