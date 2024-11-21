@@ -8,15 +8,26 @@
 </p>
 
 
-This is the repo of the course project of 2024 fall brain-inspired intelligence.
+This is the repo of the course project of SJTU 2024 fall brain-inspired intelligence.
 
 This model is a modification of MambaOut model, modified form the implementation of MambaOut proposed by the paper "[MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)". 
+
+# Requirements
+
+```
+astor
+sortedcontainers
+torch (with cuda)
+sympy
+spikingjelly
+```
 
 # Run 
 ## SMO, XSMO
 
-1. See `val.sh`, modify the three arguments at top. Checkpoint file name should match model name.
-2. `bash val.sh` and wait. You should see results in a minute.
+1. Make sure your `nvcc` version is compatible with PyTorch. If you use CUDA 12.1 with x86-64 Linux, you can use my compiled binary, in `build_mambaout`. Otherwise, compilation will start automatically,  repoting a runtime error if versions are incompatible.
+2. See `val.sh`, modify the three arguments at top. Checkpoint file name should match model name.
+3. `bash val.sh` and wait. You should see results in a minute.
 
 ## Explorations
 ```bash
